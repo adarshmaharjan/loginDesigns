@@ -35,8 +35,8 @@ body{
     font-weight: 700; 
 }
 .overlay{
-    height: 100%;
-    width: 0;
+    height: 0;
+    width: 100%;
     position: fixed;;
     z-index: 200;
     top: 0;
@@ -225,13 +225,14 @@ main{
 /*banner-start*/
 .banner{
     background: none;
-    /* position: relative; */
+    position: relative;
     height: 657px;
-    /* text-align: center; */
-    display: table;
+    text-align: center;
+    object-fit: cover;
+
 }
 #banner-video{
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -240,13 +241,14 @@ main{
     width: auto;
     height: auto;
     z-index: -100;
+    object-fit: cover;
     
 }
 .banner-contents{
     display: table;
     height: 100%;
     width: 100%;
-    text-align: center;
+
 }
 .banner-content{
     display: table-cell;
