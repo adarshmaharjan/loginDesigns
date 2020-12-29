@@ -35,49 +35,119 @@ body{
     font-weight: 700; 
 }
 .overlay{
-    height: 0;
-    width: 100%;
+    height: 100%;
+    width: 0;
     position: fixed;;
     z-index: 200;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,0.5);
     overflow: hidden;
     transition: 0.5s;
+    
+}
+.overlay a{
+    display: block;
+    color: #fff;  
+    transition: all 0.4s ease-in-out;
+    font-size: 12px;
+    font-family: Lato,sans-serif;
+    font-weight: 400;
+    left: 0.2em;
+    font-style: normal;
+}
+.overlay a:hover,
+.overlay a:active{
+    cursor: pointer;
+    color: #f1f1f1;
 }
 .overlay-container{
     position: relative;
     height: 100%;
     width: 50%;
-    background-color: #6a6a6a;
+    background-color: #1c1b1b;
     z-index: 300;
 
 }
 .overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    margin: 0 28px;
 
-}
-.overlay a{
-    display: block;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-
-
-}
-.overlay a:hover,
-.overlay a:active{
-    color: #f1f1f1;
 }
 .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+    /* position: absolute; */
+    /* top: 8px; */
+    /* left: 30px; */
+    padding: 20px 0 0 28px;
+    font-size: 30px;
+    font-weight: 300;
 }
+.overlay-nav-content a{
+    text-transform: uppercase;
+    position: relative;
+    padding: 20px 0;
+
+    
+}
+.overlay-nav-content a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #555454;
+
+
+}
+.overlay-info-content{
+    margin-top: 28px;
+}
+.overlay-info-content a{
+    text-transform: capitalize;
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 18px;
+    /* padding: 0; */
+}
+.overlay-footer{
+    display: flex;
+    position: absolute;
+    margin-left: 28px;
+    bottom: 26px;
+
+}
+
+.overlay-select-content{
+    padding: 0px 16px;
+
+
+}
+.overlay-select-content select{
+
+    font-size: 12px;
+    padding-right: 15px;
+    background: transparent;
+    border: none;
+    font-family: Lato,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* font-size: inherit; */
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #fff;
+
+}
+.overlay-icons{
+    display: flex;
+}
+.overlay-icons a i{
+    padding: 0 15px;
+    vertical-align: bottom;
+}
+
+
+/*normalization*/
 a{
     display: inline-block;
     text-decoration: none;
@@ -233,9 +303,10 @@ main{
 }
 #banner-video{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: 0;
+    left: 0;
+    /* transform: translate(-50%,-50%); */
+    display: block;
     min-width: 100%;
     max-width: 100%;
     width: auto;
